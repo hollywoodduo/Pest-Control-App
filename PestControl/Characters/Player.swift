@@ -29,6 +29,8 @@ class Player: SKSpriteNode {
     zPosition = 50
     
     physicsBody = SKPhysicsBody(circleOfRadius: size.width/2)
+    physicsBody?.categoryBitMask = PhysicsCategory.Player
+    physicsBody?.contactTestBitMask = PhysicsCategory.All
     physicsBody?.restitution = 1.0
     physicsBody?.linearDamping = 0.5
     physicsBody?.friction = 0
